@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate it</title>
+    <link rel="icon" href="icon.png" type="image/icon type">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        div{
+            /* border: 1px solid; */
+            height: 5rem;
+            width: 5rem;
+            border: none;
+            background-color: blue;
+            animation: circulate;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes circulate{
+            0%{
+                transform: translate(0);
+            }
+            50%{
+                transform: translate(0) scale(8) rotate(180deg);
+                border-radius: 50%;
+                background-color: red;
+            }
+            100%{
+                transform: translate(0) scale(1);
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

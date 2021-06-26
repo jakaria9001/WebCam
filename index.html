@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
+    <meta name="description" content="Webcam, Online Webcam, Recording, Online camera, Online camera with filters, Gallery">
+    <title>Click It</title>
+    <link rel="icon" href="logo.png" type="image/icon type">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- <video src="C:\Users\jakar\Desktop\Extras\movie.mp4"  type="video/mp4" controls autoplay></video>  -->
+    <div id="video-container">
+        <video autoplay></video>
+    </div>
+    <div class="temp"></div>
+    <div class="filter-container">
+        <div class="filter" style="background-color: #b867dd54;"> </div>
+        <div class="filter" style="background-color: #224d9785;"> </div>
+        <div class="filter" style="background-color: #f1b91f50"> </div>
+        <div class="filter" style="background-color: #48f02e41"> </div>
+        <div class="filter" style="background-color: #0f48e454"> </div>
+        <div class="filter" style="background-color: #e7b1de44"> </div>
+        <div class="filter" > </div>
+
+    </div>
+    <button id="gallery">Gallery</button>
+    <button id="record"> <div></div> </button>
+    <button id="capture"> <div></div> </button>
+    <div class="zoom-container">
+        <div class="zoom-in">+</div>
+        <div class="zoom-out">-</div>
+    </div>
+    <script src="dbScript.js"></script>
+    <script src="script.js"></script>
+=======
+    <title>Document</title>
+</head>
+<body>
+    <!-- <video src="C:\Users\jakar\Desktop\Extras\movie.mp4"  type="video/mp4" controls autoplay></video>  -->
+    <video src="" controls autoplay></video>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <script>
+
+        let video = document.querySelector("video");
+        let start = document.querySelector("#start");
+        let stop = document.querySelector("#stop");
+        let mediaRecorder;
+        let chunks = [];
+
+        start.addEventListener("click", function(){
+            // start recording
+            mediaRecorder.start();
+        });
+        stop.addEventListener("click", function(){
+            // stop recording
+            mediaRecorder.stop();
+        });
+
+        navigator.mediaDevices.getUserMedia({video:true, audio:true})
+        .then(function (mediaStream){
+
+            mediaRecorder = new MediaRecorder(mediaStream);
+
+            mediaRecorder.addEventListener("dataavailable", function(e){
+                chunks.push(e.data);
+            });
+            mediaRecorder.addEventListener("stop", function(e){
+                let blob = new Blob(chunks, {type: "video/mp4"}) // large binary file = video 
+                // added an anchor to download the chunks accumulated in the blob variable.
+                let a = document.createElement("a");
+                let url = window.URL.createObjectURL(blob);
+                a.href = url;
+                a.download = 'video.mp4'
+                a.click();
+                a.remove();
+            });
+            video.srcObject = mediaStream;
+            }).catch(function(err){
+            console.log(err);
+        })
+    </script>
+>>>>>>> e62d485...  Learnt basics of canvas and made a basic architecture of the camera app
+</body>
+
+
+</html>

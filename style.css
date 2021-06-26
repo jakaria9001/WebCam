@@ -1,0 +1,133 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-color: black;
+    overflow: hidden;  
+    /* position: relative;   */
+}
+.filter-container{
+    height: 30rem;
+    width: 6rem;
+    position: fixed;
+    top: 5rem;
+    left: 5rem;
+    z-index: 3;
+    border: 1px solid red;
+
+}
+.filter{
+    height: 5rem;
+    background-image: url("abc.png");
+    
+    background-blend-mode: color-burn;
+    background-size: cover;
+    /* border-color: antiquewhite; */
+    border: 1px solid white;
+    
+}
+.temp-filter{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    /* background-color: red; */
+    z-index: 0;
+    opacity: 0.20;
+    top: 0;
+}
+#gallery{
+    position: fixed;
+    z-index: 3;
+    top:3rem;
+    right: 20px;
+
+}
+#record, #capture{
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    position: fixed;
+    right: 20px;
+    border: 5px solid white;
+    background: black;
+    z-index: 3;
+
+}
+#record{
+    top: 35vh;
+}
+#record div{
+    height: 75%;
+    width: 80%;
+    border: 1px solid;
+    margin: auto;
+    border-radius: 50%;
+    background: red;
+}
+#capture{
+    top: 48vh;
+}
+#capture div{
+    height: 75%;
+    width: 80%;
+    border: 1px solid;
+    margin: auto;
+    border-radius: 50%;
+    background: white;
+}
+#video-container{
+    height: 100vh;
+    width: 100vw;
+}
+video{
+    height: 100%;
+    width: 100%;
+}
+.record-animation{
+    animation: zoom-in-zoom-out 1.5s infinite;
+
+}
+.capture-animation{
+    animation: zoom-in-zoom-out 1s ;
+}
+
+@keyframes zoom-in-zoom-out{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.zoom-container{
+    height: 22vh;
+    width: 5rem;
+    /* border: 1px solid white; */
+    background-color: #57606f; 
+    position: fixed;
+    top: 65vh;
+    right: 20px;
+    z-index: 3;
+}
+.zoom-in, .zoom-out{
+    height: 50%;
+    width: 100%;
+    /* border: 1px solid white; */
+    color: white;
+    text-align: center;
+    font-size: 5rem;
+    font-weight: bold;
+    /* margin: auto; */
+}
+.zoom-out{
+    margin-top:-1rem;
+    /* border: none; */
+}

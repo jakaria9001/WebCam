@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+<<<<<<< HEAD
+    <link rel="icon" href="icon.png" type="image/icon type">
+=======
+>>>>>>> e62d485...  Learnt basics of canvas and made a basic architecture of the camera app
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+<<<<<<< HEAD
+            /* overflow: hidden; */
+=======
+            overflow: hidden;
+>>>>>>> e62d485...  Learnt basics of canvas and made a basic architecture of the camera app
+        }
+        canvas{
+            background-color: aqua;
+            
+        }
+    </style>
+</head>
+<body>
+    <canvas></canvas>
+<<<<<<< HEAD
+    <img src="icon.PNG" alt="background">
+=======
+
+>>>>>>> e62d485...  Learnt basics of canvas and made a basic architecture of the camera app
+    <script>
+        let canvas = document.querySelector("canvas");
+        canvas.width=window.innerWidth;
+        canvas.height = window.innerHeight;
+        let tool = canvas.getContext("2d"); // tool to draw in canva
+<<<<<<< HEAD
+        let image = document.querySelector("img");
+        image.addEventListener("load", ()=>{
+            tool.drawImage(image, 0, 0);
+        })
+        // tool.moveTo(0,0);
+        // tool.lineTo(500, 400);
+        // tool.strokeStyle = "red";
+        // tool.lineWidth = 5;
+        // tool.stroke();
+        // // for new path : 
+        // tool.beginPath();
+        // tool.moveTo(500, 400);
+        // tool.lineTo(900,50)
+        // tool.strokeStyle = "blue";
+        // tool.stroke();
+        // // tool.fillRec : 
+        // tool.beginPath();
+        // // tool.moveTo(500, 500);
+        // tool.fillStyle = "green"
+        // tool.fillRect(1000,200, 300, 300); // parameters :  x, y, height, width
+
+   </script>
+=======
+        tool.moveTo(0,0);
+        tool.lineTo(500, 400);
+        tool.strokeStyle = "red";
+        tool.lineWidth = 5;
+        tool.stroke();
+        // for new path : 
+        tool.beginPath();
+        tool.moveTo(500, 400);
+        tool.lineTo(900,50)
+        tool.strokeStyle = "blue";
+        tool.stroke();
+        // tool.fillRec : 
+        tool.beginPath();
+        // tool.moveTo(500, 500);
+        tool.fillStyle = "green"
+        tool.fillRect(1000,200, 300, 300); // parameters :  x, y, height, width
+    </script>
+>>>>>>> e62d485...  Learnt basics of canvas and made a basic architecture of the camera app
+</body>
+</html>
