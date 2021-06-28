@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
     <meta name="description" content="Webcam, Online Webcam, Recording, Online camera, Online camera with filters, Gallery">
     <title>Click It</title>
-    <link rel="icon" href="logo.png" type="image/icon type">
+    <link rel="icon" href="/src/assets/logo.png" type="image/icon type">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -34,9 +33,8 @@
         <div class="zoom-in">+</div>
         <div class="zoom-out">-</div>
     </div>
-    <script src="dbScript.js"></script>
+    <script src="/other_pages/dbScript.js"></script>
     <script src="script.js"></script>
-=======
     <title>Document</title>
 </head>
 <body>
@@ -44,47 +42,6 @@
     <video src="" controls autoplay></video>
     <button id="start">Start</button>
     <button id="stop">Stop</button>
-    <script>
-
-        let video = document.querySelector("video");
-        let start = document.querySelector("#start");
-        let stop = document.querySelector("#stop");
-        let mediaRecorder;
-        let chunks = [];
-
-        start.addEventListener("click", function(){
-            // start recording
-            mediaRecorder.start();
-        });
-        stop.addEventListener("click", function(){
-            // stop recording
-            mediaRecorder.stop();
-        });
-
-        navigator.mediaDevices.getUserMedia({video:true, audio:true})
-        .then(function (mediaStream){
-
-            mediaRecorder = new MediaRecorder(mediaStream);
-
-            mediaRecorder.addEventListener("dataavailable", function(e){
-                chunks.push(e.data);
-            });
-            mediaRecorder.addEventListener("stop", function(e){
-                let blob = new Blob(chunks, {type: "video/mp4"}) // large binary file = video 
-                // added an anchor to download the chunks accumulated in the blob variable.
-                let a = document.createElement("a");
-                let url = window.URL.createObjectURL(blob);
-                a.href = url;
-                a.download = 'video.mp4'
-                a.click();
-                a.remove();
-            });
-            video.srcObject = mediaStream;
-            }).catch(function(err){
-            console.log(err);
-        })
-    </script>
->>>>>>> e62d485...  Learnt basics of canvas and made a basic architecture of the camera app
 </body>
 
 

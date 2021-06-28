@@ -19,7 +19,7 @@ body{
 }
 .filter{
     height: 5rem;
-    background-image: url("abc.png");
+    background-image: url("/src/assets/abc.png");
     
     background-blend-mode: color-burn;
     background-size: cover;

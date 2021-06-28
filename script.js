@@ -22,7 +22,7 @@
         let galleryBtn = document.querySelector("#gallery");
 
         galleryBtn.addEventListener("click", function(){
-            location.assign("gallery.html");
+            location.assign("/other_pages/gallery.html");
         })
         zoomInBtn.addEventListener("click", function(){
             if(currrentZoom < maxZoom){

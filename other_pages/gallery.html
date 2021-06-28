@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 5px;
+        justify-content: space-evenly;
+        /* background-image: url("gallery_bckgrnd.jpg"); */
+        background: url("/src/assets/gallery_bckgrnd.jpg") no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    .media-container{
+        /* border-radius: 55%; */
+        margin-top: 2rem;
+        width: 20rem;
+        height: 18rem;
+        /* border: 1px solid #ccc; */
+    }
+    .media{
+        width: 100%;
+        height: 80%;
+        /* margin-top: 45px; */
+        padding: 5px;
+        /* background-color: #ccc; */
+        background: #43C6AC;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #191654, #43C6AC);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #191654, #43C6AC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        /* border: 1px solid #ccc; */
+    }
+    /* button{
+        
+    } */
+    img, video{
+        border-radius: 15px;
+        width: 100%;
+        height: 100%;
+        /* border-radius: 50%; */
+    }
+    button {
+        width: 100%;
+        height: 10%;
+        display: inline-block;
+        padding: 5px;
+        margin-top: 0.35rem;
+        font-size: 14px;
+        cursor: pointer;
+        /* text-align: ; */
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #4CAF50;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 5px #999;
+    }
+
+    button:hover {background-color: #3e8e41}
+
+    button:active {
+        background-color: #3e8e41;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+    }
+</style>
+    <title>My Gallery</title>
+    <link rel="icon" href="/src/assets/logo.png" type="image/icon type">
+</head>
+<body>
+
+<script src="dbScript.js"></script>
+<script>
+    setTimeout(() => {
+        viewMedia();
+    }, 100);
+</script>
+</body>
+</html>
